@@ -1,4 +1,3 @@
-// const express = require('express')
 import 'dotenv/config';
 import { Server } from './models/server.js';
 

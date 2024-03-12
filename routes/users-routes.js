@@ -30,7 +30,6 @@ router.post('/', [
     check('password', 'El password es obligatorio y más de 6 caractéres').isLength({min: 6}),
     check('email', 'El correo no es válido').isEmail(),
     check('email').custom(ifEmailExist),
-    // check('role', 'No es un rol válido').isIn(['ADMIN_ROLE', 'USER_ROLE']),
     check('role').custom((role) => isRoleValid(role)),
     validateFields,
 ], usersPost)
